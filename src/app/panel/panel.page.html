@@ -1,0 +1,14 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>panel</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-button expand="block" (click)="add()">Add</ion-button>
+
+  <div *ngFor="let fase of fases">
+    <h1 *ngIf="fase.fase">Hola</h1>
+  </div>
+
+</ion-content>

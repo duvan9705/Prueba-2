@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Storage } from '@ionic/storage';
 
 @Component({
   selector: 'app-home',
@@ -7,6 +8,19 @@ import { Component } from '@angular/core';
 })
 export class HomePage {
 
-  constructor() {}
+  constructor(
+    private storage : Storage
+  ) {}
+
+  ionViewWillEnter() {
+    this.storage.set('fases',[
+      {'id':1,'fase':true},
+      {'id':2,'fase':true},
+      {'id':3,'fase':true},
+      {'id':4,'fase':true},
+      {'id':5,'fase':true},
+      {'id':6,'fase':true}
+    ]);
+  }
 
 }
